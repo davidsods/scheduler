@@ -10,6 +10,7 @@ const App = () => {
       const response = await fetch(url);
       if (!response.ok) throw response;
       const json = await response.json();
+      console.log(json)
       setSchedule(addScheduleTimes(json));
     }
     fetchSchedule();
