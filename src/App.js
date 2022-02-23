@@ -33,6 +33,9 @@ const App = () =>  (
   </div>
 );
 
+const Banner = ({ title }) => (
+  <h1>{ title }</h1>
+);
 
 const CourseList = ({ courses }) => (
   <div>
