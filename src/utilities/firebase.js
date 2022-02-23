@@ -1,18 +1,9 @@
 import { initializeApp } from 'firebase/app';
 import { getDatabase, onValue, ref, set } from 'firebase/database';
+import React, { useState, useEffect } from 'react';
 
-const firebaseConfig = {
-  apiKey: "...",
-  authDomain: "...",
-  databaseURL: "...",
-  projectId: "...",
-  storageBucket: "....",
-  messagingSenderId: "...",
-  appId: "..."
-};
 
-const firebase = initializeApp(firebaseConfig);
-const database = getDatabase(firebase);
+
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -25,6 +16,8 @@ const firebaseConfig = {
     appId: "1:248287847493:web:95e81c1219e5bc9d496f2c",
     measurementId: "G-TYSFZTHWRW"
   };
+const firebase = initializeApp(firebaseConfig);
+const database = getDatabase(firebase);
 
   export const useData = (path, transform) => {
     const [data, setData] = useState();
